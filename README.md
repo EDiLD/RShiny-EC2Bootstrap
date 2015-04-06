@@ -221,10 +221,12 @@ Install base R
     -   At this point, you can use a text editor (unfortunately we can only use CLI and non-GUI text editors) to 
         change the line `listen 3838;` to `listen 80;`
         
-    -   Makes sure to save the changes and you can now access your shiny instances without specifying the `3838` port
+    -   Makes sure to save the changes and restart the server:
+    ```bash
+    sudo restart shiny-server
+    ```
+    - you can now access your shiny instances without specifying the `3838` port
         number!
-        
-- And we're done!
 
 <sub>([back to contents](#contents))</sub>
 
