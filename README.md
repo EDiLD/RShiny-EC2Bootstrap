@@ -131,14 +131,14 @@ shiny-server: 1.3.0.403
     su
     ```
     
--   Update your barebones EC2 virtual machine and install R:
+-   Update your barebones EC2 virtual machine:
     
     ```bash
     sudo apt-get update
     sudo apt-get install libcurl4-openssl-dev
     ```
-    
-    ```baseh
+-   Install recent R:
+    ```bash
     sudo nano /etc/apt/sources.list
     ````
 Add following entry
