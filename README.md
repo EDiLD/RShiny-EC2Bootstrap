@@ -127,7 +127,7 @@ shiny-server: 1.3.0.403
 -   First, create a superuser root password by entering a password in the EC2 command line.
     
     ```bash
-    sudo password root
+    sudo passwd root
     su
     ```
     
@@ -135,8 +135,28 @@ shiny-server: 1.3.0.403
     
     ```bash
     sudo apt-get update
-    sudo apt-get install r-base-dev
     sudo apt-get install libcurl4-openssl-dev
+    ```
+    
+    ```baseh
+    sudo nano /etc/apt/sources.list
+    ````
+Add following entry
+
+    ```
+    deb http://cran.rstudio.com/bin/linux/ubuntu trusty/
+    ```
+Add public keys
+
+    ```bash
+    gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+    gpg -a --export E084DAB9 | sudo apt-key add -
+    ```
+Install base R
+    ```
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install r-base-dev
     ```
     
 -   R is now successfuly installed!
